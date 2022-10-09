@@ -38,7 +38,7 @@ sshagent(['dc292b7a-3b39-4630-9fc3-1b806b54412c']) {
  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war  ec2-user@172.31.7.80:/opt/apache-tomcat-9.0.65/webapps/"
 }
 }
-*/
+
 
 }//try block closing
 catch (e){
@@ -79,5 +79,6 @@ def slackNotifications(String buildStatus = 'STARTED') {
 
   // Send notifications
   slackSend (color: colorCode, message: summary, channel: "#walmart")
+  */
 }
 
